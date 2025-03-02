@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuizMaster - Test Your Knowledge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      .slider-container {
+        overflow: hidden;
+        position: relative;
+      }
+      .slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+      .slide {
+        flex: 0 0 100%;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <div id="header"></div>
+
+    <!-- Home Page -->
+    <div id="home-page" class="page active">
+      <!-- Hero Section -->
+      <div class="bg-indigo-700 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">
+            Welcome to QuizMaster
+          </h1>
+          <p class="text-xl md:text-2xl mb-8">
+            Test your knowledge and challenge yourself with our quizzes!
+          </p>
+          <button
+            class="bg-white text-indigo-700 px-6 py-3 rounded-full font-semibold hover:bg-indigo-100 transition"
+          ><a href="quiz.html">
+            Start a Quiz </a> 
+          </button>
+        </div>
+      </div>
+
+      <!-- Slider Section -->
+      <div class="container mx-auto px-4 py-12">
+        <h2 class="text-3xl font-bold text-center mb-8">Featured Quizzes</h2>
+
+        <div
+          class="slider-container w-full max-w-4xl mx-auto rounded-xl shadow-lg"
+        >
+          <div class="slider h-72 md:h-96">
+            <!-- Slide 1 -->
+            <div
+              class="slide bg-gradient-to-r from-blue-500 to-indigo-600 p-8 text-white flex flex-col items-center justify-center"
+            >
+              <h3 class="text-2xl md:text-3xl font-bold mb-4">
+                Science Quiz Challenge
+              </h3>
+              <p class="mb-6 text-lg">
+                Test your knowledge of physics, chemistry, and biology with our
+                science quiz!
+              </p>
+              <button
+                class="bg-white text-indigo-600 px-6 py-2 rounded w-max hover:bg-indigo-100 transition"
+              >
+                <a href="quiz.html"> Try Now </a>
+              </button>
+            </div>
+            <!-- Slide 2 -->
+            <div
+              class="slide bg-gradient-to-r from-purple-500 to-pink-500 p-8 text-white flex flex-col items-center justify-center"
+            >
+              <h3 class="text-2xl md:text-3xl font-bold mb-4">
+                History Trivia
+              </h3>
+              <p class="mb-6 text-lg">
+                Explore the past with our challenging history questions!
+              </p>
+              <button
+                class="bg-white text-purple-600 px-6 py-2 rounded w-max hover:bg-purple-100 transition"
+              >
+                <a href="quiz.html"> Start Quiz </a>
+              </button>
+            </div>
+            <!-- Slide 3 -->
+            <div
+              class="slide bg-gradient-to-r from-green-500 to-teal-500 p-8 text-white flex flex-col items-center justify-center"
+            >
+              <h3 class="text-2xl md:text-3xl font-bold mb-4">
+                Geography Explorer
+              </h3>
+              <p class="mb-6 text-lg">
+                Travel the world with our geography quiz and discover amazing
+                places!
+              </p>
+              <button
+                class="bg-white text-green-600 px-6 py-2 rounded w-max hover:bg-green-100 transition"
+              >
+                <a href="quiz.html"> Explore Now </a>
+              </button>
+            </div>
+            <!-- Slide 4 -->
+            <div
+              class="slide bg-gradient-to-r from-red-500 to-orange-500 p-8 text-white flex flex-col items-center justify-center"
+            >
+              <h3 class="text-2xl md:text-3xl font-bold mb-4">
+                Pop Culture Challenge
+              </h3>
+              <p class="mb-6 text-lg">
+                Stay up to date with movies, music, and celebrities with our pop
+                culture quiz!
+              </p>
+              <button
+                class="bg-white text-red-600 px-6 py-2 rounded w-max hover:bg-red-100 transition"
+              >
+                <a href="quiz.html"> Take the Quiz </a>
+              </button>
+            </div>
+          </div>
+
+          <!-- Slider Controls -->
+          <button
+            class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/30 hover:bg-white/50 text-white w-10 h-10 rounded-full flex items-center justify-center"
+            id="prev-slide"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button
+            class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/30 hover:bg-white/50 text-white w-10 h-10 rounded-full flex items-center justify-center"
+            id="next-slide"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
+
+          <!-- Slider Dots -->
+          <div
+            class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2"
+          >
+            <button
+              class="w-3 h-3 rounded-full bg-white/50 dot active"
+              data-index="0"
+            ></button>
+            <button
+              class="w-3 h-3 rounded-full bg-white/50 dot"
+              data-index="1"
+            ></button>
+            <button
+              class="w-3 h-3 rounded-full bg-white/50 dot"
+              data-index="2"
+            ></button>
+            <button
+              class="w-3 h-3 rounded-full bg-white/50 dot"
+              data-index="3"
+            ></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Categories Section -->
+      <div class="bg-gray-100 py-12">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold text-center mb-8">Quiz Categories</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Category 1 -->
+            <div
+              class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
+            >
+              <div
+                class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-4"
+              >
+                <i class="fas fa-atom text-xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Science</h3>
+              <p class="text-gray-600 mb-4">
+                Explore physics, chemistry, biology and more
+              </p>
+              <a href="quiz.html" class="text-blue-600 font-medium hover:underline"
+                >View Quizzes</a
+              >
+            </div>
+
+            <!-- Category 2 -->
+            <div
+              class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
+            >
+              <div
+                class="w-12 h-12 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mb-4"
+              >
+                <i class="fas fa-landmark text-xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">History</h3>
+              <p class="text-gray-600 mb-4">
+                Journey through time with historical trivia
+              </p>
+              <a href="quiz.html" class="text-purple-600 font-medium hover:underline"
+                >View Quizzes</a
+              >
+            </div>
+
+            <!-- Category 3 -->
+            <div
+              class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
+            >
+              <div
+                class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4"
+              >
+                <i class="fas fa-globe-americas text-xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Geography</h3>
+              <p class="text-gray-600 mb-4">
+                Test your knowledge of countries and landmarks
+              </p>
+              <a href="quiz.html" class="text-green-600 font-medium hover:underline"
+                >View Quizzes</a
+              >
+            </div>
+
+            <!-- Category 4 -->
+            <div
+              class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
+            >
+              <div
+                class="w-12 h-12 bg-red-100 text-red-600 rounded-full flex items-center justify-center mb-4"
+              >
+                <i class="fas fa-film text-xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Entertainment</h3>
+              <p class="text-gray-600 mb-4">
+                Movies, music, celebrities and more
+              </p>
+              <a href="quiz.html" class="text-red-600 font-medium hover:underline"
+                >View Quizzes</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+    <div id="footer"></div>
+    <script>
+       fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => (document.getElementById("header").innerHTML = data));
+        
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => (document.getElementById("footer").innerHTML = data));
+      // Slider Functionality
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".slide");
+      const totalSlides = slides.length;
+      const slider = document.querySelector(".slider");
+      const dots = document.querySelectorAll(".dot");
+
+      // Initialize the slider
+      function setSlidePosition() {
+        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+        // Update active dot
+        document.querySelectorAll(".dot").forEach((dot, index) => {
+          if (index === currentSlide) {
+            dot.classList.add("bg-white");
+            dot.classList.remove("bg-white/50");
+          } else {
+            dot.classList.remove("bg-white");
+            dot.classList.add("bg-white/50");
+          }
+        });
+      }
+
+      // Next slide
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        setSlidePosition();
+      }
+
+      // Previous slide
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        setSlidePosition();
+      }
+
+      // Event listeners for slider controls
+      document
+        .getElementById("next-slide")
+        .addEventListener("click", nextSlide);
+      document
+        .getElementById("prev-slide")
+        .addEventListener("click", prevSlide);
+
+      // Event listeners for dots
+      dots.forEach((dot) => {
+        dot.addEventListener("click", function () {
+          currentSlide = parseInt(this.getAttribute("data-index"));
+          setSlidePosition();
+        });
+      });
+
+      // Auto slide every 5 seconds
+      let slideInterval = setInterval(nextSlide, 5000);
+
+      // Pause auto sliding when hovering over the slider
+      const sliderContainer = document.querySelector(".slider-container");
+      sliderContainer.addEventListener("mouseenter", () => {
+        clearInterval(slideInterval);
+      });
+
+      sliderContainer.addEventListener("mouseleave", () => {
+        slideInterval = setInterval(nextSlide, 5000);
+      });
+    </script>
+  </body>
+</html>

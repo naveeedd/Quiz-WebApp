@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuizMaster About Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <div id="header"></div>
+
+    <!-- About Us Page -->
+    <div id="about-page">
+      <div class="container mx-auto px-4 py-12">
+        <h1 class="text-4xl font-bold text-center mb-12">About QuizMaster</h1>
+
+        <!-- Mission Section -->
+        <div class="max-w-3xl mx-auto mb-16">
+          <div class="flex flex-col md:flex-row items-center mb-12">
+            <div class="md:w-1/3 mb-6 md:mb-0 flex justify-center">
+              <div
+                class="w-48 h-48 bg-indigo-600 rounded-full flex items-center justify-center"
+              >
+                <img
+                  src="logo.jpeg"
+                  alt="QuizMaster Logo"
+                  class="rounded-full"
+                />
+              </div>
+            </div>
+            <div class="md:w-2/3 md:pl-8">
+              <h2 class="text-2xl font-bold mb-4">Our Mission</h2>
+              <p class="text-gray-700 mb-4">
+                At QuizMaster, we believe learning should be fun and engaging.
+                Our mission is to create a platform where knowledge and
+                curiosity are celebrated through interactive quizzes that
+                challenge and educate.
+              </p>
+              <p class="text-gray-700">
+                Founded in 2023, we've been dedicated to creating high-quality
+                quiz content across various subjects, helping students, trivia
+                enthusiasts, and curious minds expand their knowledge in an
+                entertaining way.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Section -->
+        <h2 class="text-3xl font-bold text-center mb-8">Our Team</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <!-- Team Member 1 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="h-48 bg-indigo-100 flex items-center justify-center">
+              <img
+                src="/api/placeholder/150/150"
+                alt="Team Member"
+                class="rounded-full"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-1">Naveed Raza Lodhi</h3>
+              <p class="text-indigo-600 mb-3">Founder & CEO</p>
+              <p class="text-gray-600">
+                Quiz enthusiast with a background in education and technology.
+              </p>
+            </div>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="h-48 bg-indigo-100 flex items-center justify-center">
+              <img
+                src="/api/placeholder/150/150"
+                alt="Team Member"
+                class="rounded-full"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-1">Faiq Ahmed Khan</h3>
+              <p class="text-indigo-600 mb-3">Content Director</p>
+              <p class="text-gray-600">
+                Former teacher with a passion for creating engaging learning
+                materials.
+              </p>
+            </div>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="h-48 bg-indigo-100 flex items-center justify-center">
+              <img
+                src="/api/placeholder/150/150"
+                alt="Team Member"
+                class="rounded-full"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-1">Muhammad Usama</h3>
+              <p class="text-indigo-600 mb-3">Lead Developer</p>
+              <p class="text-gray-600">
+                Tech expert who builds the tools that make our quizzes
+                interactive and fun.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Values Section -->
+        <div class="max-w-4xl mx-auto mt-16">
+          <h2 class="text-3xl font-bold text-center mb-8">Our Values</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-md text-center">
+              <div
+                class="w-16 h-16 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fas fa-brain text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Learning</h3>
+              <p class="text-gray-600">
+                We believe knowledge is power and strive to make learning
+                accessible and fun for everyone.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md text-center">
+              <div
+                class="w-16 h-16 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fas fa-users text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Community</h3>
+              <p class="text-gray-600">
+                We foster a supportive community where people can challenge
+                themselves and others.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md text-center">
+              <div
+                class="w-16 h-16 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fas fa-lightbulb text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Innovation</h3>
+              <p class="text-gray-600">
+                We constantly improve our platform to create the best quiz
+                experience possible.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+
+      <script >
+        fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => (document.getElementById("header").innerHTML = data));
+        
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => (document.getElementById("footer").innerHTML = data));
+      </script>
+  </body>
+</html>
